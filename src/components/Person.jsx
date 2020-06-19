@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Person = (props) => {
     let moviePeople = props.items.map((person) => {
-        let idLink = "https://ghibliapi.herokuapp.com/people/" + person.id;
+
         return (
             <div key={person.id} className="card bg-info">
                 <div className="card-header">

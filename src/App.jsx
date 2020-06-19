@@ -16,22 +16,20 @@ class App extends Component {
         return (
             <Router>
                 <Fragment>
-                    <nav class="navbar navbar-info bg-dark">
-                        <a class="navbar-brand" href="#">
-                            Studio Ghibli
-                        </a>
-                        <button type="button" class="btn btn-sm btn-outline-info btn-link"><Link to="/">Go Home</Link></button>
-                        <button type="button" class="btn btn-sm btn-outline-info btn-link"><Link to="/films">Go to Films</Link></button>
-                        <button type="button" class="btn btn-sm btn-outline-info btn-link"><Link to="/people">Go to People</Link></button>
+                    <nav className="navbar navbar-info bg-dark">
+                        <Link className="navbar-brand" to="/">Studio Ghibli</Link>
+                        <button type="button" className="btn btn-sm btn-outline-info btn-link"><Link to="/">Go Home</Link></button>
+                        <button type="button" className="btn btn-sm btn-outline-info btn-link"><Link to="/films">Go to Films</Link></button>
+                        <button type="button" className="btn btn-sm btn-outline-info btn-link"><Link to="/people">Go to People</Link></button>
                     </nav>
-                        
-                        <Switch>
-                            <Route exact path="/" component={Page1} />
-                            <Route exact path="/films" component={Films} />
-                            <Route exact path="/people" component={People} />
-                            <Route path="/films/:id" component={FilmId} />
-                            <Route path="/people/:id" component={PersonId} />
-                        </Switch>
+
+                    <Switch>
+                        <Route exact path="/" component={Page1} />
+                        <Route exact path="/films" component={Films} />
+                        <Route exact path="/people" component={People} />
+                        <Route path="/films/:id" component={FilmId} />
+                        <Route path="/people/:id" component={PersonId} />
+                    </Switch>
                 </Fragment>
             </Router>
 
